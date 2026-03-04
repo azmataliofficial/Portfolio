@@ -14,7 +14,7 @@
     --dark: #1e293b;
     --light: #f8fafc;
     --gray: #64748b;
-    --success: #10b981;
+    --success: #10b981; 
     --warning: #f59e0b;
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
     --gradient-accent: linear-gradient(135deg, var(--accent), var(--primary));
@@ -1810,17 +1810,19 @@ footer {
     .contact-form {
         margin: 0 auto;
         padding: 25px 20px;
+        text-align:center;
     }
 
     .contact-info h3 {
         font-size: 2rem;
+        text-align:center;
     }
 
     .contact-detail {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        align-items: left;
+        align-items: center;
     }
 
     .contact-icon {
@@ -2219,17 +2221,19 @@ footer {
     .contact-info h3 {
         font-size: 1.8rem;
         margin-bottom: 15px;
+        text-align:center;
     }
 
     .contact-info p {
         font-size: 1rem;
         margin-bottom: 25px;
+        text-align:center;
     }
 
     .contact-detail {
         padding: 15px;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 10px;
     }
 
@@ -2432,5 +2436,6 @@ iframe {
     max-width: 100%;
     height: auto;
 }
+
 
 
