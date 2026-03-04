@@ -1872,6 +1872,8 @@ footer {
     .stats-container {
         grid-template-columns: 1fr;
     }
+    .form-group label{
+        text-align:left;
 }
 
 @media (max-width: 400px) {
@@ -2433,3 +2435,4 @@ iframe {
     max-width: 100%;
     height: auto;
 }
+
