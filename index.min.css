@@ -1825,6 +1825,10 @@ footer {
         align-items: center;
     }
 
+    .contact-detail h4, .contact-detail p {
+        text-align:center;
+    }
+
     .contact-icon {
         margin-bottom: 0;
         min-width: 50px;
@@ -2436,6 +2440,7 @@ iframe {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
