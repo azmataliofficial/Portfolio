@@ -1816,12 +1816,12 @@ footer {
         font-size: 2rem;
     }
 
-    /* .contact-detail {
+    .contact-detail {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        align-items: center;
-    } */
+        align-items: left;
+    }
 
     .contact-icon {
         margin-bottom: 0;
@@ -2226,12 +2226,12 @@ footer {
         margin-bottom: 25px;
     }
 
-    /* .contact-detail {
+    .contact-detail {
         padding: 15px;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 10px;
-    } */
+    }
 
     .contact-icon {
         width: 50px;
@@ -2432,4 +2432,5 @@ iframe {
     max-width: 100%;
     height: auto;
 }
+
 
