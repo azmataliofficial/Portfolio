@@ -958,7 +958,8 @@ body.dark-mode .skill-badge {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: auto;
     gap: 35px;
 }
 
@@ -1566,12 +1567,17 @@ footer {
     }
 
     .contact-details {
-        align-items: center;
+        /* align-items: center; */
+        width: 100%;
     }
 
     .contact-detail {
         width: 100%;
-        max-width: 480px;
+        /* max-width: 480px; */
+    }
+
+    .contact-detail .contact-text{
+        text-align: left;
     }
 
     .section-title h2 {
