@@ -75,6 +75,9 @@
     <div class="bg-element bg-element-3"></div>
     <div class="bg-element bg-element-4"></div>
 
+    <!-- Mobile Menu Overlay (NEW - bug fix) -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
     <!-- Header & Navbar -->
     <header id="header">
         <div class="container">
@@ -85,10 +88,10 @@
                         <i class="fas fa-sun"></i>
                         <i class="fas fa-moon"></i>
                     </button>
-                    <button class="mobile-menu-btn" aria-label="Menu">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <ul class="nav-links">
+                    <ul class="nav-links" id="navLinks">
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
@@ -229,7 +232,7 @@
                                 alt="Web Design Project by Azmat Ali - Responsive Architect Website"
                                 class="project-img">
                             <div class="project-overlay">
-                                <a href="https://xrylq4.csb.app/#home" class="btn">
+                                <a href="https://xrylq4.csb.app/#home" class="btn" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> Visit Site
                                 </a>
                             </div>
@@ -247,9 +250,7 @@
                         </div>
                     </div>
 
-
                     <!-- Movieflix Project -->
-
                     <div class="project-card" data-category="web-development">
                         <div class="project-img-container">
                             <img src="assets/thumbnail movieflix.png"
@@ -302,7 +303,6 @@
             </div>
 
             <!-- Web Development Projects Tab -->
-            <!-- Project 1 -->
             <div class="tab-content" id="web-development-projects">
                 <div class="projects-grid">
                     <div class="project-card" data-category="web-development">
@@ -330,13 +330,11 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
                     <div class="project-card" data-category="web-development">
                         <div class="project-img-container">
                             <img src="assets/thumbnail movieflix.png"
                                 alt="Web Development Project by Azmat Ali - Movieflix Clone" class="project-img">
                             <div class="project-overlay">
-                                <!-- YAHAN BHI BADLA: ab GitHub repo link hai -->
                                 <a href="https://movieeeflix.vercel.app/" class="btn" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> View Site
                                 </a>
@@ -355,7 +353,6 @@
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
                     <div class="project-card" data-category="web-development">
                         <div class="project-img-container">
                             <img src="assets/thumbnail oxford.png"
@@ -414,15 +411,13 @@
             <!-- Web Design Projects Tab -->
             <div class="tab-content" id="web-design-projects">
                 <div class="projects-grid">
-
-
                     <div class="project-card" data-category="web-design">
                         <div class="project-img-container">
                             <img src="assets/thumbnail Architect.png"
                                 alt="Web Design Project by Azmat Ali - Responsive Architect Website"
                                 class="project-img">
                             <div class="project-overlay">
-                                <a href="https://xrylq4.csb.app/#home" class="btn">
+                                <a href="https://xrylq4.csb.app/#home" class="btn" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> Visit Site
                                 </a>
                             </div>
@@ -441,12 +436,10 @@
                         </div>
                     </div>
 
-
                     <div class="project-card" data-category="web-design">
                         <div class="project-img-container">
                             <img src="assets/thumbnail car.png"
-                                alt="Web Design Project by Azmat Ali - Responsive Architect Website"
-                                class="project-img">
+                                alt="Web Design Project by Azmat Ali - Car Website" class="project-img">
                             <div class="project-overlay">
                                 <a href="https://car-comparison-pi.vercel.app/" class="btn" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> Visit Site
@@ -464,7 +457,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="project-card" data-category="web-design">
                         <div class="project-img-container">
@@ -487,14 +479,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- add more projects -->
-
-
                 </div>
             </div>
         </div>
-    </section
+    </section>
 
     <!-- Education Section -->
     <section id="education" class="education">
@@ -587,18 +575,10 @@
             <div class="section-title">
                 <h2>Client Testimonials</h2>
             </div>
-
-            <!-- Slider Container -->
             <div class="testimonial-slider">
-                <div class="slider-track" id="testimonialSlider">
-                    <!-- Slides will be added by JavaScript -->
-                </div>
+                <div class="slider-track" id="testimonialSlider"></div>
             </div>
-
-            <!-- Timer Dots -->
-            <div class="timer-indicators" id="timerIndicators">
-                <!-- Dots will be added by JavaScript -->
-            </div>
+            <div class="timer-indicators" id="timerIndicators"></div>
         </div>
     </section>
 
@@ -660,7 +640,8 @@
                             <div class="form-group">
                                 <label for="email">Email Address</label>
                                 <input type="email" id="email" name="email" placeholder="Your Email" required
-                                    class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                    class="form-control"
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                                     title="Please enter a valid email address">
                             </div>
 
