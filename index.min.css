@@ -157,6 +157,7 @@ body.dark-mode .logo {
 body.dark-mode .nav-links a {
     color: var(--dark-text);
 }
+
 /* 
 body.dark-mode .nav-links {
     background: var(--dark-card);
@@ -419,12 +420,13 @@ section {
     }
 }
 
-/* ===== HEADER & NAVBAR — FIXED: Always visible, no hide on scroll ===== */
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    margin: 0 auto;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(12px);
@@ -433,13 +435,14 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* REMOVED: header.hidden class — navbar will no longer hide */
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     align-items: center;
     height: 75px;
+    width: 95vw;
 }
 
 .nav-right {
@@ -456,7 +459,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
 }
 
 .logo span {
@@ -565,15 +568,17 @@ header {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    padding-top: 130px;
-    padding-bottom: 120px;
-    display: flex;
-    align-items: center;
+    padding: 130px 0 120px 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .hero-content {
+    width: 95vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -701,20 +706,20 @@ header {
 }
 
 .skill-orbit-2 {
-    width: calc(100% + 160px);
-    height: calc(100% + 160px);
+    width: calc(100% + 300px);
+    height: calc(100% + 300px);
     animation: rotateOrbit 70s linear infinite reverse;
 }
 
 .skill-orbit-3 {
-    width: calc(100% + 220px);
-    height: calc(100% + 220px);
+    width: calc(100% + 500px);
+    height: calc(100% + 500px);
     animation: rotateOrbit 90s linear infinite;
 }
 
 .skill-orbit-4 {
-    width: calc(100% + 280px);
-    height: calc(100% + 280px);
+    width: calc(100% + 340px);
+    height: calc(100% + 340px);
     animation: rotateOrbit 85s linear infinite reverse;
 }
 
@@ -806,6 +811,8 @@ body.dark-mode .skill-badge {
 }
 
 .skills-container {
+    margin: 0 auto;
+    width: 95vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 35px;
@@ -961,6 +968,7 @@ body.dark-mode .skill-badge {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     margin: auto;
     gap: 35px;
+    width: 95vw;
 }
 
 .project-card {
@@ -1064,6 +1072,8 @@ body.dark-mode .skill-badge {
 
 /* ===== EDUCATION SECTION ===== */
 .journey-container {
+    width: 95vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 35px;
@@ -1124,6 +1134,8 @@ body.dark-mode .skill-badge {
 
 /* ===== STATS SECTION ===== */
 .stats-container {
+    width: 95vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 35px;
@@ -1182,9 +1194,9 @@ body.dark-mode .skill-badge {
 }
 
 .testimonial-container {
-    max-width: 1200px;
+    width: 95vw;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .testimonial-slider {
@@ -1219,7 +1231,7 @@ body.dark-mode .skill-badge {
     color: var(--dark);
     margin-bottom: 30px;
     font-style: italic;
-    max-width: 700px;
+    max-width: 95vw;
     margin: 0 auto 30px;
 }
 
@@ -1277,15 +1289,14 @@ body.dark-mode .skill-badge {
 }
 
 /* ===== CONTACT SECTION ===== */
-.contact {
-    background-color: #f8fafc;
-}
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
+    width: 95vw;
+    margin: 0 auto;
 }
 
 .contact-info h3 {
@@ -1428,6 +1439,8 @@ footer {
     margin-bottom: 60px;
     flex-wrap: wrap;
     gap: 40px;
+    width: 95vw;
+    margin: 0 auto;
 }
 
 .footer-logo {
@@ -1576,7 +1589,7 @@ footer {
         /* max-width: 480px; */
     }
 
-    .contact-detail .contact-text{
+    .contact-detail .contact-text {
         text-align: left;
     }
 
