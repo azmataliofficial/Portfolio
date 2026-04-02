@@ -1,4 +1,5 @@
-/* ===== RESET & ROOT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +32,6 @@
     --dark-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== BASE ===== */
 html,
 body {
     overflow-x: hidden;
@@ -42,7 +42,7 @@ body {
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
+    line-height: 1.3;
     color: var(--dark);
     background-color: var(--light);
     cursor: default;
@@ -158,16 +158,11 @@ body.dark-mode .nav-links a {
     color: var(--dark-text);
 }
 
-/* 
-body.dark-mode .nav-links {
-    background: var(--dark-card);
-} */
 
 body.dark-mode .mobile-menu-btn {
     color: var(--dark-text);
 }
 
-/* FIX: Dark mode testimonials - selector was wrong in original */
 body.dark-mode .testimonial-slider {
     background: var(--dark-card);
     box-shadow: var(--dark-shadow);
@@ -262,20 +257,14 @@ body.dark-mode .theme-toggle .fa-moon {
     color: #000000;
 }
 
-/* ===== LAYOUT ===== */
+/* container */
 .container {
-    width: 100%;
-    max-width: 1300px;
+    width: 100vw;
+    height: auto;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 80px 0;
 }
 
-section {
-    padding: 80px 0;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
 
 .section-title {
     text-align: center;
@@ -566,19 +555,16 @@ header {
     display: block;
 }
 
-/* ===== HERO SECTION ===== */
+/* Hero Section */
 .hero {
-    padding: 130px 0 120px 0;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    height: 100vh;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
     position: relative;
-    min-height: 100%;
 }
 
 .hero-content {
-    width: 95vw;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -598,10 +584,12 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    position: relative;
+    display: inline-block;
 }
 
 .hero-text p {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     margin-bottom: 40px;
     color: var(--gray);
     opacity: 0;
@@ -651,8 +639,8 @@ header {
 .profile-container {
     position: relative;
     width: 100%;
-    max-width: 420px;
-    height: 420px;
+    max-width: 450px;
+    height: 450px;
     margin: 0 auto;
 }
 
@@ -672,15 +660,18 @@ header {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0deg);
     }
 
-    50% {
-        transform: translateY(-15px);
+    33% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    66% {
+        transform: translateY(10px) rotate(-5deg);
     }
 }
 
-/* ===== SKILLS ORBITS ===== */
 .skills-orbits {
     position: absolute;
     top: 0;
@@ -706,48 +697,42 @@ header {
 }
 
 .skill-orbit-2 {
-    width: calc(100% + 300px);
-    height: calc(100% + 300px);
+    width: calc(100% + 150px);
+    height: calc(100% + 150px);
     animation: rotateOrbit 70s linear infinite reverse;
 }
 
 .skill-orbit-3 {
-    width: calc(100% + 500px);
-    height: calc(100% + 500px);
+    width: calc(100% + 200px);
+    height: calc(100% + 200px);
     animation: rotateOrbit 90s linear infinite;
 }
 
 .skill-orbit-4 {
-    width: calc(100% + 340px);
-    height: calc(100% + 340px);
+    width: calc(100% + 250px);
+    height: calc(100% + 250px);
     animation: rotateOrbit 85s linear infinite reverse;
 }
 
 .skill-badge {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     z-index: 10;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--primary);
-    cursor: pointer;
-}
-
-body.dark-mode .skill-badge {
-    background: var(--dark-card);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-badge:hover {
-    transform: scale(1.25) !important;
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    transform: scale(1.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     background: var(--gradient-primary);
     color: white;
 }
@@ -764,15 +749,15 @@ body.dark-mode .skill-badge {
 
 .floating-badge {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     box-shadow: var(--shadow);
     animation: badgeFloat 8s ease-in-out infinite;
     z-index: 20;
@@ -787,7 +772,7 @@ body.dark-mode .skill-badge {
 
 .badge2 {
     bottom: 60%;
-    left: 82%;
+    left: 80%;
     background: linear-gradient(135deg, var(--success), var(--accent));
     animation-delay: 2s;
 }
@@ -800,7 +785,7 @@ body.dark-mode .skill-badge {
     }
 
     50% {
-        transform: translateY(-20px) scale(1.08);
+        transform: translateY(-25px) scale(1.1);
     }
 }
 
@@ -1190,7 +1175,7 @@ body.dark-mode .skill-badge {
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
     padding: 80px 0;
-    background-color: #f8fafc;
+    /* background-color: #f8fafc; */
 }
 
 .testimonial-container {
