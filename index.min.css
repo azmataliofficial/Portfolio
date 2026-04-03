@@ -245,7 +245,7 @@ h4 {
 }
 
 section {
-    padding: 80px 0;
+    padding: 60px 0;
     width: 100%;
 }
 
@@ -757,7 +757,7 @@ header.hidden {
 .skill-card {
     background: white;
     border-radius: 20px;
-    padding: 35px;
+    padding: 30px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
@@ -809,7 +809,7 @@ header.hidden {
 
 .skill-item {
     background-color: rgba(37, 99, 235, 0.1);
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 50px;
     font-weight: 600;
     color: var(--primary);
@@ -820,7 +820,7 @@ header.hidden {
 }
 
 .skill-item i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .skill-item:hover {
@@ -927,7 +927,7 @@ header.hidden {
 .project-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     transition: var(--transition);
 }
 
@@ -1004,7 +1004,7 @@ header.hidden {
 
 .journey-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
@@ -1012,7 +1012,7 @@ header.hidden {
     background: white;
     box-shadow: var(--shadow);
     border-radius: 20px;
-    padding: 40px;
+    padding: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
@@ -1034,14 +1034,14 @@ header.hidden {
 }
 
 .journey-icon {
-    font-size: 3.5rem;
-    margin-bottom: 25px;
+    font-size: 3rem;
+    margin-bottom: 15px;
     color: var(--accent);
 }
 
 .journey-card h3 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: rgb(0, 0, 0);
 }
 
@@ -1615,7 +1615,7 @@ footer {
 
     .contact-detail {
         width: 100%;
-        margin: 0;
+        max-width: 100%;
     }
 
     .footer-content {
@@ -1706,7 +1706,6 @@ footer {
     .testimonial-text {
         font-size: 1.1rem;
     }
-
 }
 
 @media (max-width: 576px) {
