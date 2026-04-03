@@ -690,7 +690,6 @@
                 <div class="contact">
                     <div class="contact-form">
                         <form id="contactForm">
-
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="cf-name" name="name" class="form-control" placeholder="Your Name"
@@ -699,7 +698,7 @@
 
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="cf-name" name="email" placeholder="Your Email" required
+                                <input type="email" id="cf-email" name="email" placeholder="Your Email" required
                                     class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                                     title="Please enter a valid email address">
                             </div>
@@ -719,14 +718,13 @@
 
                             <div class="form-group">
                                 <label for="message">Your Message</label>
-                                <textarea id="message" name="message" class="form-control"
+                                <textarea id="cf-message" name="message" class="form-control"
                                     placeholder="Tell me about your opportunity..." required></textarea>
                             </div>
 
-                            <button type="submit" id="cf-btn" class="btn"><i class="fas fa-paper-plane"></i>
-                                Send Message</button>
+                            <button type="submit" id="cf-btn" class="btn"><i class="fas fa-paper-plane"></i> Send
+                                Message</button>
                         </form>
-
                         <div id="successMessage" class="success-message" style="display: none;">
                             <i class="fas fa-check-circle"></i> Thank you! Your message has been
                             sent successfully. We'll get back to you soon.
