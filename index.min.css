@@ -504,8 +504,7 @@ header.hidden {
 .hero {
     width: 95vw;
     margin: 0 auto;
-    padding-top: 120px;
-    /* padding-bottom: 140px; */
+    padding-top: 150px;
     display: flex;
     align-items: center;
     position: relative;
@@ -742,13 +741,14 @@ header.hidden {
 
 /* Skills Section */
 .skills {
-    width: 95vw;
+    width: 100vw;
     margin: 0 auto;
     position: relative;
-    background-color: #f8fafc;
 }
 
 .skills-container {
+    width: 95vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
@@ -772,24 +772,8 @@ header.hidden {
 }
 
 .skill-card:hover {
-    transform: translateY(-15px) scale(1.02);
+    transform: scale(1.03);
     box-shadow: var(--shadow-hover);
-}
-
-.skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 0;
-    background: var(--primary);
-    transition: var(--transition);
-
-}
-
-.skill-card:hover::before {
-    height: 100%;
 }
 
 .skill-header {
@@ -930,13 +914,11 @@ header.hidden {
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.02);
+    transform: scale(1.03);
     box-shadow: var(--shadow-hover);
 }
 
 .project-img-container {
-    /* height: 240px;
-    width: 100%; */
     aspect-ratio: 16/9;
     overflow: hidden;
     position: relative;
@@ -1016,7 +998,6 @@ header.hidden {
 .journey {
     width: 95vw;
     margin: 0 auto;
-    /* background: var(--gradient-dark); */
     color: var(--dark-bg);
     position: relative;
 }
@@ -1047,7 +1028,7 @@ header.hidden {
 }
 
 .journey-card:hover {
-    transform: translateY(-15px) scale(1.02);
+    transform: scale(1.03);
     background: rgba(255, 255, 255, 0.15);
     border-color: var(--accent);
 }
@@ -1108,7 +1089,7 @@ header.hidden {
 }
 
 .stat-item:hover {
-    scale: 1.05;
+    scale: 1.03;
     box-shadow: var(--shadow-hover);
 }
 
@@ -1262,6 +1243,8 @@ header.hidden {
 }
 
 .contact-container {
+    width: 95vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -1397,6 +1380,8 @@ footer {
 }
 
 .footer-content {
+    width: 95vw;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1626,6 +1611,11 @@ footer {
 
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-detail {
+        width: 100%;
+        margin: 0;
     }
 
     .footer-content {
